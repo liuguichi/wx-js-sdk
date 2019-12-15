@@ -1,0 +1,55 @@
+{
+  "name": "wx-js-sdk",
+  "version": "1.0.0",
+  "description": "latest version jssdk, ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:es6 && npm run build:webpack",
+    "build:es6": "rm -rf lib && tsc",
+    "build:webpack": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuguichi/wx-js-sdk.git"
+  },
+  "keywords": [
+    "wechat",
+    "weixin",
+    "js-sdk",
+    "ts",
+    "es"
+  ],
+  "author": "guichi688@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuguichi/wx-js-sdk/issues"
+  },
+  "homepage": "https://github.com/liuguichi/wx-js-sdk#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-typescript": "^7.7.4",
+    "@types/node": "^12.12.17",
+    "@types/webpack": "^4.41.0",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.4",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
