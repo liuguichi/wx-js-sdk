@@ -14,11 +14,11 @@ export interface IConfigParams {
 
 export interface ICommonParams {
   /** 接口调用成功时执行的回调函数 */
-  success: () => void;
+  success?: () => void;
   /** 接口调用失败时执行的回调函数 */
-  fail: () => void;
+  fail?: () => void;
   /** 接口调用完成时执行的回调函数，无论成功或失败都会执行 */
-  complete: () => void;
+  complete?: () => void;
   /** 用户点击取消时的回调函数，仅部分有用户取消操作的api才会用到 */
   cancel?: () => void;
   /** 监听Menu中的按钮点击时触发的方法，该方法仅支持Menu中的相关接口 */
