@@ -1,6 +1,6 @@
 {
   "name": "wx-ts-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "latest version jssdk, ",
   "main": "lib/wx-js-sdk.js",
   "module": "lib/index.js",
