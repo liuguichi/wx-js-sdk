@@ -2,7 +2,8 @@
   "name": "wx-ts-sdk",
   "version": "1.0.1",
   "description": "latest version jssdk, ",
-  "main": "index.js",
+  "main": "lib/wx-js-sdk.js",
+  "module": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:es6 && npm run build:webpack",
