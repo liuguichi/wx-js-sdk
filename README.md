@@ -2,3 +2,9 @@
 
 # wx-ts-sdk
 latest version wechat js-sdk, support ts,es,script use case
+
+## usage
+
+```js
+  import initJssdk from 'wx-ts-sdk'
+```
